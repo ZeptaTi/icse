@@ -26,11 +26,11 @@ install_build_dependencies() {
 }
 
 install_global_python_dependencies() {
-    sudo pip install virtualenv virtualenvwrapper
+    #sudo pip install virtualenv virtualenvwrapper
 }
 
 install_local_python_dependences() {
-    pip install numpy
+    #pip install numpy
 }
 
 download_packages() {
