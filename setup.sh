@@ -25,4 +25,7 @@ npm install request
 
 rm xvzf ~/home/pi/bcm2835-1.46.tar.gz
 rm xvzf ~/home/pi/opencv-3.1.0.zip
+rm xvzf ~/home/pi/opencv_contrib-3.1.0.zip
+
+
 
