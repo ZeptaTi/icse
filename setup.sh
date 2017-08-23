@@ -16,8 +16,13 @@ cd bcm2835-1.46/
 ./configure
 make
 sudo make install
+cd ..
+
 
 mkdir remoto 
 npm install node-dht-sensor
 npm install request
-wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.46.tar.gz
+
+rm xvzf ~/home/pi/bcm2835-1.46.tar.gz
+rm xvzf ~/home/pi/opencv-3.1.0.zip
+
