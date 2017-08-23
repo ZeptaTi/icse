@@ -84,10 +84,10 @@ main() {
     download_packages
     log "Unpacking OpenCV packages..."
     unpack_packages
-    #log "Installing global python deps..."
-    #install_global_python_dependencies
-    #log "Setting up local python environment..."
-    #setup_virtualenv
+    log "Installing global python deps..."
+    install_global_python_dependencies
+    log "Setting up local python environment..."
+    setup_virtualenv
     log "Building OpenCV..."
 
     cd "$OPENCV_PACKAGE_NAME"
