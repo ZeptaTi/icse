@@ -1,3 +1,4 @@
+cd ~/home/pi
 
 # Instala o opencv
 curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
@@ -6,20 +7,16 @@ curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install nodejs
 
-cd ~/home
-mkdir pi
-cd pi
-
 wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.46.tar.gz
 tar xvzf bcm2835-1.46.tar.gz
 cd bcm2835-1.46/
 ./configure
 make
 sudo make install
-cd ..
 
-
+cd ~/home/pi
 mkdir remoto 
+cd remoto
 npm install node-dht-sensor
 npm install request
 
