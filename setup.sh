@@ -1,10 +1,10 @@
 
 # Instala o opencv
-# curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
+curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
 
 # Atualiza e instala o Node
-#curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-#sudo apt install nodejs
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt install nodejs
 
 cd ~/home
 mkdir pi
@@ -23,9 +23,9 @@ mkdir remoto
 npm install node-dht-sensor
 npm install request
 
-rm xvzf ~/home/pi/bcm2835-1.46.tar.gz
-rm xvzf ~/home/pi/opencv-3.1.0.zip
-rm xvzf ~/home/pi/opencv_contrib-3.1.0.zip
+rm ~/home/pi/bcm2835-1.46.tar.gz
+rm ~/home/pi/opencv-3.1.0.zip
+rm ~/home/pi/opencv_contrib-3.1.0.zip
 
 
 
