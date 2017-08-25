@@ -1,7 +1,7 @@
 cd ~
 
 # Instala o opencv
-#curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
+curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
 
 cd ~
 
