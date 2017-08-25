@@ -4,10 +4,9 @@
 // 13 ago 2017 - ECosta - Versão inicial
 // ---------------------------------------------------------------
 
-// ---------------------------------------------------------------
-// INSTTRUÇOES AMBIENTE
-// ---------------------------------------------------------------
-//curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
+/* SETUP AMBINETE
+curl -sL  https://raw.githubusercontent.com/ZeptaTi/icse/master/setup.sh | sudo -E bash -
+*/
 
 // ---------------------------------------------------------------
 // PARAMETROS
