@@ -7,38 +7,12 @@
 // ---------------------------------------------------------------
 // INSTTRUÇOES AMBIENTE
 // ---------------------------------------------------------------
-/* 
-
-
-curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
-
--- Em qualquer diretorio
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt install nodejs
-
--- No diretorio base /home/pi
-wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.46.tar.gz
-tar xvzf bcm2835-1.46.tar.gz
-cd bcm2835-1.46/
-./configure
-make
-sudo make install
- 
--- No diretorio do remoto /home/pi/remoto (criar):
-npm install node-dht-sensor
-npm install request
-Copiar este arquivo para /home/pi/remoto
-
--- Executar (estando no diretorio remoto)
-sudo node app.js
-
-*/
+//curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
 
 // ---------------------------------------------------------------
 // PARAMETROS
 // ---------------------------------------------------------------
-let inputPath = '/contador/';
-//let inputPath = '/home/pi/Eventos/';
+let inputPath = '/home/pi/Eventos/';
 let interval = 5 * 60 * 1000;
 let apiBatchSize = 500;
 
@@ -53,7 +27,7 @@ let tempSensorPin = 25;
 // ---------------------------------------------------------------
 const fs = require('fs');
 const request = require('request');
-//const sensor = require('node-dht-sensor');
+const sensor = require('node-dht-sensor');
 
 let payload = [];
 let sucesso = [];
