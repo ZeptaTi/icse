@@ -99,4 +99,6 @@ main() {
     install
 }
 
-main
+#main
+
+exit
