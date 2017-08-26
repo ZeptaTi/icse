@@ -42,7 +42,7 @@ curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 # ---------------------------------------------------------------
 title "Install node"
-apt install nodejs
+apt -y install nodejs < "/dev/null"
 
 # ---------------------------------------------------------------
 title "Dependencias node do remoto"
