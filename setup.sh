@@ -42,6 +42,10 @@ wget https://raw.githubusercontent.com/ZeptaTi/icse/master/contador
 chmod +x contador
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/Calib.cfg
 
+# Adiciona inicialização automática
+cd /etc/profile.d
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/icse.sh
+
 
 # remove os arquivo baixados
 rm ~/bcm2835-1.46.tar.gz
