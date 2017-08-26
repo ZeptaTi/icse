@@ -36,7 +36,7 @@ npm install request
 sudo apt-get install cmake -y
 
 # Instala o opencv
-curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
+#curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
 
 # Instala o contador
 mkdir /home/pi/contador
@@ -46,7 +46,7 @@ chmod +x contador
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg
 
 # Adiciona inicialização automática
-echo "@sudo node /home/pi/remoto/app.js" | sudo tee -a autostart
+echo "@lxterminal -e node /home/pi/remoto/app.js" | sudo tee -a ~/.config/lxsession/LXDE-pi/autostart
 
 # remove os arquivo baixados
 rm ~/bcm2835-1.46.tar.gz
