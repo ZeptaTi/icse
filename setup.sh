@@ -18,24 +18,26 @@ function title {
 }
 
 # ---------------------------------------------------------------
-mkdir /home/pi/remoto 
-mkdir /home/pi/Eventos
-mkdir /home/pi/contador
+APP_ROOT="/home/pi"
+
+mkdir $APP_ROOT/remoto 
+mkdir $APP_ROOT/Eventos
+mkdir $APP_ROOT/contador
 
 # ---------------------------------------------------------------
 title "Instala CMAKE"
 apt-get install cmake -y
 
 # ---------------------------------------------------------------
-cd /home/pi
+cd $APP_ROOT
 title "Instala lib hardware BCM"
 wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.46.tar.gz
 tar xvzf bcm2835-1.46.tar.gz
-cd /home/pi/bcm2835-1.46/
+cd $APP_ROOT/bcm2835-1.46/
 ./configure
 make
 make install
-cd /home/pi
+cd $APP_ROOT
 
 # ---------------------------------------------------------------
 title "Update repositorio node"
@@ -47,35 +49,37 @@ apt -y install nodejs < "/dev/null"
 
 # ---------------------------------------------------------------
 title "Dependencias node do remoto"
-cd /home/pi/remoto
+cd $APP_ROOT/remoto
 npm install node-dht-sensor
 npm install request
 
 # ---------------------------------------------------------------
 title "Baixa remoto"
+cd $APP_ROOT/remoto
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js
 
 # ---------------------------------------------------------------
 title "Baixa contador"
-cd /home/pi/contador
+cd $APP_ROOT/contador
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/contador
 chmod +x contador
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg
 
 # ---------------------------------------------------------------
 title "Adicionando inicialização automática"
-echo "@lxterminal -e node /home/pi/remoto/app.js" | tee -a ~/.config/lxsession/LXDE-pi/autostart
+echo "@lxterminal -e sudo node /home/pi/remoto/app.js" | tee -a /home/pi/.config/lxsession/LXDE-pi/autostart
+echo "@lxterminal -e /home/pi/contador/contador" | tee -a /home/pi/.config/lxsession/LXDE-pi/autostart
+
+# ---------------------------------------------------------------
+title "Instalando OPENCV"
+curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
 
 # ---------------------------------------------------------------
 title "Removendo arquivos temporários"
-rm /home/pi/bcm2835-1.46.tar.gz
-rm /home/pi/opencv-3.1.0.zip
-rm /home/pi/opencv_contrib-3.1.0.zip
-
-# ---------------------------------------------------------------
-#title "Instala OPENCV"
-#curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
+rm $APP_ROOT/bcm2835-1.46.tar.gz
+rm $APP_ROOT/opencv-3.1.0.zip
+rm $APP_ROOT/opencv_contrib-3.1.0.zip
 
 # ---------------------------------------------------------------
 title "REINICIANDO"
-sudo shutdown –h
+reboot

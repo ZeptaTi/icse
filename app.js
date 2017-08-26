@@ -68,7 +68,7 @@ function readTemp() {
 			let json = tempToJson(temp.toFixed(1), humi.toFixed(1));
 			sendTemp(json);
 		} else {
-			console.log(err);
+			mensagem(err);
 		}
 	});
 }
@@ -86,7 +86,7 @@ function sendTemp(json) {
 		}
 	}, function (err, response, body) {
 		if (err)
-			console.log(err);
+			mensagem(err);
 	});
 }
 
