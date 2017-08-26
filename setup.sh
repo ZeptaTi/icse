@@ -4,6 +4,10 @@
 # 18 ago 2017 - ECosta - Versão inicial
 # 25 ago 2017 - ECosta - Remoção dos arquivos temporarios
 # ---------------------------------------------------------------
+#
+# Para chamar este script utlize a linha de comando abaixo:
+# curl -sL  https://raw.githubusercontent.com/ZeptaTi/icse/master/setup.sh | sudo -E bash -
+#
 
 # Atualiza e instala o Node
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
