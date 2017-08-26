@@ -1,0 +1,1 @@
+sudo node /home/pi/remoto/app.js

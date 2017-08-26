@@ -5,16 +5,13 @@
 # 25 ago 2017 - ECosta - Remoção dos arquivos temporarios
 # ---------------------------------------------------------------
 
-# Instala o opencv
-curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
-
 # Atualiza e instala o Node
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install nodejs
 
 cd ~
 
-# Instalar as lib do hardware (necessário para ler o sensor de temp
+# Instala as lib do hardware (necessário para ler o sensor de temp)
 wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.46.tar.gz
 tar xvzf bcm2835-1.46.tar.gz
 cd bcm2835-1.46/
@@ -22,16 +19,29 @@ cd bcm2835-1.46/
 make
 sudo make install
 
+# Cria os diretorios
 cd ~
 mkdir remoto 
-cd remoto
+mkdir Eventos
 
-# baixa o remoto
+# Baixa o remoto
+cd remoto
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js
 
 # Instala dependencias do remoto
 npm install node-dht-sensor
 npm install request
+
+# Instala o opencv
+curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
+
+# Instala o contador
+mkdir /home/pi/contador
+cd /home/pi/contador
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/contador
+chmod +x contador
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/Calib.cfg
+
 
 # remove os arquivo baixados
 rm ~/bcm2835-1.46.tar.gz
