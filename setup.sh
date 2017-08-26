@@ -65,14 +65,13 @@ wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg
 # ---------------------------------------------------------------
 title "Adicionando inicialização automática"
 echo "@lxterminal -e node /home/pi/remoto/app.js" | sudo tee -a ~/.config/lxsession/LXDE-pi/autostart
-echo "OK"
+
 # ---------------------------------------------------------------
 title "Removendo arquivos temporários"
 rm $TEMP_NODE_SCRIPT
 rm /home/pi/bcm2835-1.46.tar.gz
 rm /home/pi/opencv-3.1.0.zip
 rm /home/pi/opencv_contrib-3.1.0.zip
-echo "OK"
 
 # ---------------------------------------------------------------
 #title "Instala OPENCV"
