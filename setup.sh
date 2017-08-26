@@ -32,6 +32,9 @@ wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js
 npm install node-dht-sensor
 npm install request
 
+# Instala o CMAKE
+sudo apt-get install cmake -y
+
 # Instala o opencv
 curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
 
@@ -43,9 +46,7 @@ chmod +x contador
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg
 
 # Adiciona inicialização automática
-cd /etc/profile.d
-wget https://raw.githubusercontent.com/ZeptaTi/icse/master/icse.sh
-#
+echo "@node /home/pi/remoto/app.js" | sudo tee -a autostart
 
 # remove os arquivo baixados
 rm ~/bcm2835-1.46.tar.gz
