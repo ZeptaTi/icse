@@ -18,6 +18,7 @@ function title {
 }
 
 # ---------------------------------------------------------------
+title "Criando diretórios"
 APP_ROOT="/home/pi"
 
 mkdir $APP_ROOT/remoto 
@@ -72,6 +73,7 @@ echo "@lxterminal -e /home/pi/contador/contador" | tee -a /home/pi/.config/lxses
 
 # ---------------------------------------------------------------
 title "Instalando OPENCV"
+cd $APP_ROOT
 curl -sL https://raw.githubusercontent.com/ZeptaTi/icse/master/install-opencv.sh | sudo -E bash -
 
 # ---------------------------------------------------------------
@@ -81,5 +83,5 @@ rm $APP_ROOT/opencv-3.1.0.zip
 rm $APP_ROOT/opencv_contrib-3.1.0.zip
 
 # ---------------------------------------------------------------
-title "REINICIANDO"
-reboot
+#title "REINICIANDO"
+#reboot
