@@ -10,7 +10,7 @@
 #
 
 # Atualiza e instala o Node
-curl -sL https://deb.nodesource.com/setup_8.x | bash -
+curl -sL https://deb.nodesource.com/setup_8.x | bash -c
 sudo apt install nodejs
 
 cd ~
