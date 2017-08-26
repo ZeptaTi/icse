@@ -46,7 +46,7 @@ chmod +x contador
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg
 
 # Adiciona inicialização automática
-echo "@node /home/pi/remoto/app.js" | sudo tee -a autostart
+echo "@sudo node /home/pi/remoto/app.js" | sudo tee -a autostart
 
 # remove os arquivo baixados
 rm ~/bcm2835-1.46.tar.gz
