@@ -19,7 +19,7 @@ function title {
 
 # ---------------------------------------------------------------
 title "Instala CMAKE"
-sudo apt-get install cmake -y
+apt-get install cmake -y
 
 # ---------------------------------------------------------------
 title "Instala lib hardware BCM"
@@ -28,7 +28,7 @@ tar xvzf bcm2835-1.46.tar.gz
 cd bcm2835-1.46/
 ./configure
 make
-sudo make install
+make install
 
 # ---------------------------------------------------------------
 title "Update repositorio node"
@@ -66,7 +66,7 @@ wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg
 
 # ---------------------------------------------------------------
 title "Adicionando inicialização automática"
-echo "@lxterminal -e node /home/pi/remoto/app.js" | sudo tee -a ~/.config/lxsession/LXDE-pi/autostart
+echo "@lxterminal -e node /home/pi/remoto/app.js" | tee -a ~/.config/lxsession/LXDE-pi/autostart
 
 # ---------------------------------------------------------------
 title "Removendo arquivos temporários"
