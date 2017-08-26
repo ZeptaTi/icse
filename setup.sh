@@ -32,15 +32,17 @@ sudo make install
 
 # ---------------------------------------------------------------
 title "Update repositorio node"
-TEMP_NODE_SCRIPT="/home/pi/nodeSetup.sh"
-curl -sL https://deb.nodesource.com/setup_8.x > $TEMP_NODE_SCRIPT
-echo "exit" >> $TEMP_NODE_SCRIPT
-chmod +x $TEMP_NODE_SCRIPT
-bash -c $TEMP_NODE_SCRIPT
+#TEMP_NODE_SCRIPT="/home/pi/nodeSetup.sh"
+#curl -sL https://deb.nodesource.com/setup_8.x > $TEMP_NODE_SCRIPT
+#echo "exit" >> $TEMP_NODE_SCRIPT
+#chmod +x $TEMP_NODE_SCRIPT
+#bash -c $TEMP_NODE_SCRIPT
+
+curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 # ---------------------------------------------------------------
 title "Install node"
-sudo apt install nodejs
+apt install nodejs
 
 # ---------------------------------------------------------------
 title "Dependencias node do remoto"
