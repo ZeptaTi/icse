@@ -10,10 +10,14 @@
 #
 
 # Atualiza e instala o Node
-curl -sL https://deb.nodesource.com/setup_8.x | bash -c
+TEMP_NODE_SCRIPT="/home/pi/nodeSetup.sh"
+curl -sL https://deb.nodesource.com/setup_8.x > $TEMP_NODE_SCRIPT
+chmod +x $TEMP_NODE_SCRIPT
+bash -c $TEMP_NODE_SCRIPT
+
 sudo apt install nodejs
 
-cd ~
+cd \home\pi
 
 # Instala as lib do hardware (necessário para ler o sensor de temp)
 wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.46.tar.gz
@@ -24,7 +28,7 @@ make
 sudo make install
 
 # Cria os diretorios
-cd ~
+cd \home\pi
 mkdir remoto 
 mkdir Eventos
 
@@ -53,9 +57,9 @@ wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg
 echo "@lxterminal -e node /home/pi/remoto/app.js" | sudo tee -a ~/.config/lxsession/LXDE-pi/autostart
 
 # remove os arquivo baixados
-rm ~/bcm2835-1.46.tar.gz
-rm ~/opencv-3.1.0.zip
-rm ~/opencv_contrib-3.1.0.zip
+rm /home/pi/bcm2835-1.46.tar.gz
+rm /home/pi/opencv-3.1.0.zip
+rm /home/pi/opencv_contrib-3.1.0.zip
 
 
 
