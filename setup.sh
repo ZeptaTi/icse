@@ -40,7 +40,7 @@ mkdir /home/pi/contador
 cd /home/pi/contador
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/contador
 chmod +x contador
-wget https://raw.githubusercontent.com/ZeptaTi/icse/master/Calib.cfg
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg
 
 # Adiciona inicialização automática
 cd /etc/profile.d
