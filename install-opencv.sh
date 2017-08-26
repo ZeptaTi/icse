@@ -22,7 +22,7 @@ install_build_dependencies() {
     local python_dev_packages="python2.7-dev python3-dev python-pip python3-pip"
 
     sudo apt-get install -y $build_packages $image_io_packages $gtk_packages \
-                       $video_io_packages $matrix_packages #$python_dev_packages
+                       $video_io_packages $matrix_packages $python_dev_packages
 }
 
 install_global_python_dependencies() {
@@ -35,7 +35,7 @@ install_local_python_dependences() {
 
 download_packages() {
     wget -c -O "${OPENCV_PACKAGE_NAME}.zip" "$OPENCV_URL"
-    #wget -c -O "${OPENCV_CONTRIB_PACKAGE_NAME}.zip" "$OPENCV_CONTRIB_URL"
+    wget -c -O "${OPENCV_CONTRIB_PACKAGE_NAME}.zip" "$OPENCV_CONTRIB_URL"
 }
 
 unpack_packages() {
@@ -43,7 +43,7 @@ unpack_packages() {
     # -q = quiet
     # -n = never overwrite existing files
     unzip -q -n "${OPENCV_PACKAGE_NAME}.zip"
-    #unzip -q -n "${OPENCV_CONTRIB_PACKAGE_NAME}.zip"
+    unzip -q -n "${OPENCV_CONTRIB_PACKAGE_NAME}.zip"
 }
 
 setup_virtualenv() {
@@ -86,10 +86,10 @@ main() {
     log "Unpacking OpenCV packages..."
     unpack_packages
     
-    #log "Installing global python deps..."
-    #install_global_python_dependencies
-    #log "Setting up local python environment..."
-    #setup_virtualenv
+    log "Installing global python deps..."
+    install_global_python_dependencies
+    log "Setting up local python environment..."
+    setup_virtualenv
     
     log "Building OpenCV..."
     cd "$OPENCV_PACKAGE_NAME"
