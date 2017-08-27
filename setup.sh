@@ -56,12 +56,12 @@ npm install node-dht-sensor
 npm install request
 
 # ---------------------------------------------------------------
-title "Baixa remoto"
+title "Baixando remoto"
 cd $APP_ROOT/remoto
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js
 
 # ---------------------------------------------------------------
-title "Baixa contador"
+title "Baixando contador"
 cd $APP_ROOT/contador
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/contador
 chmod +x contador
@@ -82,7 +82,3 @@ title "Removendo arquivos temporários"
 rm $APP_ROOT/bcm2835-1.46.tar.gz
 rm $APP_ROOT/opencv-3.1.0.zip
 rm $APP_ROOT/opencv_contrib-3.1.0.zip
-
-# ---------------------------------------------------------------
-#title "REINICIANDO"
-#reboot
