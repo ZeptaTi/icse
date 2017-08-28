@@ -58,14 +58,14 @@ npm install request
 # ---------------------------------------------------------------
 title "Baixando remoto"
 cd $APP_ROOT/remoto
-wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O app.js
 
 # ---------------------------------------------------------------
 title "Baixando contador"
 cd $APP_ROOT/contador
-wget https://raw.githubusercontent.com/ZeptaTi/icse/master/contador
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/contador -O contador
 chmod +x contador
-wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg -O calib.cfg
 
 # ---------------------------------------------------------------
 title "Adicionando inicialização automática"
