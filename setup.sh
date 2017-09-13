@@ -70,7 +70,11 @@ wget https://raw.githubusercontent.com/ZeptaTi/icse/master/calib.cfg -O calib.cf
 # ---------------------------------------------------------------
 title "Adicionando inicialização automática"
 echo "@lxterminal -e sudo node /home/pi/remoto/app.js" | tee -a /home/pi/.config/lxsession/LXDE-pi/autostart
-echo "@lxterminal -e /home/pi/contador/contador" | tee -a /home/pi/.config/lxsession/LXDE-pi/autostart
+echo "@lxterminal -e /home/pi/contador/contador /home/pi/contador/calib.cfg" | tee -a /home/pi/.config/lxsession/LXDE-pi/autostart
+
+# ---------------------------------------------------------------
+title "Instalando libgtk2.0-dev"
+sudo apt-get install build-essential libgtk2.0-dev
 
 # ---------------------------------------------------------------
 title "Instalando OPENCV"
