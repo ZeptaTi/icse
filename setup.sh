@@ -86,3 +86,7 @@ title "Removendo arquivos temporários"
 rm $APP_ROOT/bcm2835-1.46.tar.gz
 rm $APP_ROOT/opencv-3.1.0.zip
 rm $APP_ROOT/opencv_contrib-3.1.0.zip
+
+# ---------------------------------------------------------------
+title "Reiniciando"
+reboot -f
