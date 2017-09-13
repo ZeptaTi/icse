@@ -89,4 +89,4 @@ rm $APP_ROOT/opencv_contrib-3.1.0.zip
 
 # ---------------------------------------------------------------
 title "Reiniciando"
-reboot -f
+#reboot -f
