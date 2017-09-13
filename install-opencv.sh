@@ -55,7 +55,8 @@ setup_virtualenv() {
 }
 
 build() {
-    cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    cmake -D ENABLE_PRECOMPILED_HEADERS=OFF \
+          -D CMAKE_BUILD_TYPE=RELEASE \
           -D CMAKE_INSTALL_PREFIX="$PREFIX" \
           -D INSTALL_C_EXMAPLES=OFF \
           -D INSTALL_PYTHON_EXAMPLES=OFF \
