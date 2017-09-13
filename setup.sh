@@ -74,7 +74,7 @@ echo "@lxterminal -e /home/pi/contador/contador /home/pi/contador/calib.cfg" | t
 
 # ---------------------------------------------------------------
 title "Instalando libgtk2.0-dev"
-sudo apt-get install build-essential libgtk2.0-dev
+apt-get install build-essential libgtk2.0-dev < "/dev/null"
 
 # ---------------------------------------------------------------
 title "Instalando OPENCV"
