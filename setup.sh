@@ -8,6 +8,7 @@
 # Para chamar este script utlize a linha de comando abaixo:
 # curl -sL  https://raw.githubusercontent.com/ZeptaTi/icse/master/setup.sh | sudo -E bash -
 #
+# Para monitorar a temperatura da CPU
 # watch 'vcgencmd measure_temp'
 
 function title {
