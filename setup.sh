@@ -8,7 +8,7 @@
 # Para chamar este script utlize a linha de comando abaixo:
 # curl -sL  https://raw.githubusercontent.com/ZeptaTi/icse/master/setup.sh | sudo -E bash -
 #
-# vcgencmd measure_temp
+# watch 'vcgencmd measure_temp'
 
 function title {
     echo "---------------------------------------------------------------------------"
@@ -74,7 +74,7 @@ echo "@lxterminal -e /home/pi/contador/contador /home/pi/contador/calib.cfg" | t
 
 # ---------------------------------------------------------------
 title "Instalando libgtk2.0-dev"
-apt-get install build-essential libgtk2.0-dev < "/dev/null"
+apt-get -y install build-essential libgtk2.0-dev < "/dev/null"
 
 # ---------------------------------------------------------------
 title "Instalando OPENCV"
