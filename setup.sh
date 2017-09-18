@@ -24,7 +24,10 @@ title "Criando diretórios"
 APP_ROOT="/home/pi"
 
 mkdir $APP_ROOT/remoto 
+
 mkdir $APP_ROOT/Eventos
+sudo chown pi:pi $APP_ROOT/Eventos/
+
 mkdir $APP_ROOT/contador
 
 # ---------------------------------------------------------------
