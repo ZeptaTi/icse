@@ -20,7 +20,7 @@
     },
     "led": {            
         "enabled": true,
-        "pin": 26,
+        "pin": 15,
         "minutesOffline": 1,
         "minutesOnline": 1
     }
