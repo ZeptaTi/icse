@@ -21,6 +21,8 @@ function title {
 title "Criando diretórios"
 APP_ROOT="/home/pi"
 
+rm -r "/home/pi/remoto"
+
 mkdir $APP_ROOT/remoto 
 mkdir '/home/pi/remoto/node_modules/epoll/build'
 
