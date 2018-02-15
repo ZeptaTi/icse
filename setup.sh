@@ -61,6 +61,16 @@ npm install
 # ---------------------------------------------------------------
 title "Baixando remoto"
 cd $APP_ROOT/remoto
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O app.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O comando.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O conexao.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O config.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O config.json
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O eventos.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O fileHash.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O hardware.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O log.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O temperatura.js
 
 exit
 
