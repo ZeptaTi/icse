@@ -23,6 +23,7 @@ APP_ROOT="/home/pi"
 cd $APP_ROOT
 
 rm -r "/home/pi/remoto"
+rm -r "/home/pi/.npm"
 
 mkdir $APP_ROOT/remoto 
 mkdir -p '/home/pi/remoto/node_modules/epoll/build'
@@ -35,7 +36,7 @@ arquivos=(app.js comando.js conexao.js config.js config.json eventos.js fileHash
 
 for i in "${arquivos[@]}"
 do
-    wget 'https://raw.githubusercontent.com/ZeptaTi/icse/master/'$i --s --S -O $i
+    wget 'https://raw.githubusercontent.com/ZeptaTi/icse/master/'$i -O $i
 done
 
 # ---------------------------------------------------------------
