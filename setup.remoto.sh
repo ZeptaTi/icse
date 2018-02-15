@@ -6,7 +6,7 @@
 # ---------------------------------------------------------------
 #
 # Para chamar este script utlize a linha de comando abaixo:
-# curl -sL  https://raw.githubusercontent.com/ZeptaTi/icse/master/setup.remoto.sh | bash -
+# curl -sL  https://raw.githubusercontent.com/ZeptaTi/icse/master/setup.remoto.sh | sudo -E bash -
 #
 
 function title {
@@ -22,6 +22,8 @@ title "Criando diretórios"
 APP_ROOT="/home/pi"
 
 mkdir $APP_ROOT/remoto 
+mkdir '/home/pi/remoto/node_modules/epoll/build'
+
 mkdir $APP_ROOT/Eventos
 mkdir $APP_ROOT/contador
 
