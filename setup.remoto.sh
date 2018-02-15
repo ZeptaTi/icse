@@ -21,6 +21,8 @@ function title {
 title "Criando diretórios"
 APP_ROOT="/home/pi"
 
+rm -r "/home/pi/remoto"
+
 mkdir $APP_ROOT/remoto 
 mkdir $APP_ROOT/Eventos
 mkdir $APP_ROOT/contador
