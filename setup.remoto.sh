@@ -22,8 +22,8 @@ title "Criando diretórios"
 APP_ROOT="/home/pi"
 cd $APP_ROOT
 
-rm -r "/home/pi/remoto"
-rm -r "/home/pi/.npm"
+sudo rm -r "/home/pi/remoto"
+sudo rm -r "/home/pi/.npm"
 
 mkdir $APP_ROOT/remoto 
 mkdir -p '/home/pi/remoto/node_modules/epoll/build'
