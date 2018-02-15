@@ -24,7 +24,7 @@ APP_ROOT="/home/pi"
 rm -r "/home/pi/remoto"
 
 mkdir $APP_ROOT/remoto 
-mkdir '/home/pi/remoto/node_modules/epoll/build'
+mkdir -p '/home/pi/remoto/node_modules/epoll/build'
 
 mkdir $APP_ROOT/Eventos
 mkdir $APP_ROOT/contador
