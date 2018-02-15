@@ -56,13 +56,13 @@ apt -y install nodejs < "/dev/null"
 # ---------------------------------------------------------------
 title "Dependencias node do remoto"
 cd $APP_ROOT/remoto
-npm install node-dht-sensor
-npm install request
+npm install 
 
 # ---------------------------------------------------------------
 title "Baixando remoto"
 cd $APP_ROOT/remoto
-wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O app.js
+
+exit
 
 # ---------------------------------------------------------------
 title "Baixando contador"
