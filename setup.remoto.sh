@@ -35,7 +35,7 @@ arquivos=(app.js comando.js conexao.js config.js config.json eventos.js fileHash
 
 for i in "${arquivos[@]}"
 do
-    wget 'https://raw.githubusercontent.com/ZeptaTi/icse/master/'$i -s -S -O $i
+    wget 'https://raw.githubusercontent.com/ZeptaTi/icse/master/'$i --s --S -O $i
 done
 
 # ---------------------------------------------------------------
