@@ -58,19 +58,7 @@ mkdir $APP_ROOT/contador
 title "Baixando remoto"
 cd $APP_ROOT/remoto
 
-arquivos = (
-    app.js
-    comando.js
-    conexao.js
-    config.js
-    config.json
-    eventos.js
-    fileHash.js
-    hardware.js
-    log.js
-    temperatura.js
-    package.json
-    package-lock.json)
+arquivos = (app.js comando.js conexao.js config.js config.json eventos.js fileHash.js hardware.js log.js temperatura.js package.json package-lock.json )
 
 for i in "${arquivos[@]}"
 do
