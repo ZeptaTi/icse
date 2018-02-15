@@ -2,6 +2,7 @@ const request = require('request');
 const config = require('./config.js');
 const hardware = require('./hardware.js');
 const id = hardware.id();
+const log = require('./log.js');
 
 let sensor = null;
 
@@ -22,7 +23,13 @@ function send() {
 	sensor.read(type, pin, function (err, temp, humi) {
 
 		if (!err) {
-			let json = tempToJson(temp.toFixed(1), humi.toFixed(1));
+			var t = temp.toFixed(1);
+			var h = humi.toFixed(1);
+
+			let json = tempToJson(t, h);
+
+			log.mensagem(`Esperando temp: ${t}º humud: ${h}%`);
+
 			sendTemp(json);
 		} else {
 			mensagem(err);
