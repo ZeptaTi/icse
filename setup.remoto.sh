@@ -1,0 +1,42 @@
+# ---------------------------------------------------------------
+# SETUP AMBIENTE ICSE RASPBERRY PI 
+# ---------------------------------------------------------------
+# 18 ago 2017 - ECosta - Versão inicial
+# 25 ago 2017 - ECosta - Remoção dos arquivos temporarios
+# ---------------------------------------------------------------
+#
+# Para chamar este script utlize a linha de comando abaixo:
+# curl -sL  https://raw.githubusercontent.com/ZeptaTi/icse/master/setup.remoto.sh | bash -
+#
+
+function title {
+    echo "---------------------------------------------------------------------------"
+    echo "---------------------------------------------------------------------------"
+    echo $1
+    echo "---------------------------------------------------------------------------"
+    echo "---------------------------------------------------------------------------"
+}
+
+# ---------------------------------------------------------------
+title "Criando diretórios"
+APP_ROOT="/home/pi"
+
+mkdir $APP_ROOT/remoto 
+mkdir $APP_ROOT/Eventos
+mkdir $APP_ROOT/contador
+
+# ---------------------------------------------------------------
+title "Baixando remoto"
+cd $APP_ROOT/remoto
+
+arquivos=(app.js comando.js conexao.js config.js config.json eventos.js fileHash.js hardware.js log.js temperatura.js package.json package-lock.json )
+
+for i in "${arquivos[@]}"
+do
+    wget 'https://raw.githubusercontent.com/ZeptaTi/icse/master/'$i -O $i
+done
+
+# ---------------------------------------------------------------
+title "Dependencias node do remoto"
+cd $APP_ROOT/remoto
+npm install 
