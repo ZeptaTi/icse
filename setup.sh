@@ -53,10 +53,6 @@ curl -sL https://deb.nodesource.com/setup_8.x | bash -
 title "Install node"
 apt -y install nodejs < "/dev/null"
 
-# ---------------------------------------------------------------
-title "Dependencias node do remoto"
-cd $APP_ROOT/remoto
-npm install 
 
 # ---------------------------------------------------------------
 title "Baixando remoto"
@@ -71,6 +67,13 @@ wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O fileHash.js
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O hardware.js
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O log.js
 wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O temperatura.js
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O package.json
+wget https://raw.githubusercontent.com/ZeptaTi/icse/master/app.js -O package-lock.json
+
+# ---------------------------------------------------------------
+title "Dependencias node do remoto"
+cd $APP_ROOT/remoto
+npm install 
 
 exit
 
