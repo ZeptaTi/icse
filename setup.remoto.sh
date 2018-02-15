@@ -27,9 +27,6 @@ rm -r "/home/pi/remoto"
 mkdir $APP_ROOT/remoto 
 mkdir -p '/home/pi/remoto/node_modules/epoll/build'
 
-mkdir $APP_ROOT/Eventos
-mkdir $APP_ROOT/contador
-
 # ---------------------------------------------------------------
 title "Baixando remoto"
 cd $APP_ROOT/remoto
@@ -38,7 +35,7 @@ arquivos=(app.js comando.js conexao.js config.js config.json eventos.js fileHash
 
 for i in "${arquivos[@]}"
 do
-    wget 'https://raw.githubusercontent.com/ZeptaTi/icse/master/'$i -O $i
+    wget 'https://raw.githubusercontent.com/ZeptaTi/icse/master/'$i -s -S -O $i
 done
 
 # ---------------------------------------------------------------
