@@ -19,46 +19,46 @@ function title {
     echo "---------------------------------------------------------------------------"
 }
 
-# ---------------------------------------------------------------
-title "Criando diretórios"
-APP_ROOT="/home/pi"
+# # ---------------------------------------------------------------
+# title "Criando diretórios"
+# APP_ROOT="/home/pi"
 
-mkdir $APP_ROOT/remoto 
+# mkdir $APP_ROOT/remoto 
 
-mkdir $APP_ROOT/Eventos
-sudo chown pi:pi $APP_ROOT/Eventos/
+# mkdir $APP_ROOT/Eventos
+# sudo chown pi:pi $APP_ROOT/Eventos/
 
-mkdir $APP_ROOT/contador
+# mkdir $APP_ROOT/contador
 
-# ---------------------------------------------------------------
-title "Instala CMAKE"
-apt-get install cmake -y
+# # ---------------------------------------------------------------
+# title "Instala CMAKE"
+# apt-get install cmake -y
 
-# ---------------------------------------------------------------
-cd $APP_ROOT
-title "Instala lib hardware BCM"
-wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.46.tar.gz
-tar xvzf bcm2835-1.46.tar.gz
-cd $APP_ROOT/bcm2835-1.46/
-./configure
-make
-make install
-cd $APP_ROOT
+# # ---------------------------------------------------------------
+# cd $APP_ROOT
+# title "Instala lib hardware BCM"
+# wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.46.tar.gz
+# tar xvzf bcm2835-1.46.tar.gz
+# cd $APP_ROOT/bcm2835-1.46/
+# ./configure
+# make
+# make install
+# cd $APP_ROOT
 
-# ---------------------------------------------------------------
-title "Update repositorio node"
-curl -sL https://deb.nodesource.com/setup_8.x | bash -
+# # ---------------------------------------------------------------
+# title "Update repositorio node"
+# curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
-# ---------------------------------------------------------------
-title "Install node"
-apt -y install nodejs < "/dev/null"
+# # ---------------------------------------------------------------
+# title "Install node"
+# apt -y install nodejs < "/dev/null"
 
 
 # ---------------------------------------------------------------
 title "Baixando remoto"
 cd $APP_ROOT/remoto
 
-arquivos = {
+arquivos = (
     app.js
     comando.js
     conexao.js
@@ -70,7 +70,7 @@ arquivos = {
     log.js
     temperatura.js
     package.json
-    package-lock.json}
+    package-lock.json)
 
 for i in "${arquivos[@]}"
 do
