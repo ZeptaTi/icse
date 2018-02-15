@@ -20,6 +20,7 @@ function title {
 # ---------------------------------------------------------------
 title "Criando diretórios"
 APP_ROOT="/home/pi"
+cd $APP_ROOT
 
 rm -r "/home/pi/remoto"
 
