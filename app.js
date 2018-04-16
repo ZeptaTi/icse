@@ -12,13 +12,13 @@
 // ---------------------------------------------------------------
 
 const fse = require('fs-extra');
-const config = require('./config.js');
-const log = require('./log.js');
-const comando = require('./comando.js');
-const temp = require('./temperatura.js');
-const eventos = require('./eventos.js');
-const hardware = require('./hardware.js');
-const conexao = require('./conexao.js');
+const config = require('/home/pi/remoto/config.js');
+const log = require('/home/pi/remoto/log.js');
+const comando = require('/home/pi/remoto/comando.js');
+const temp = require('/home/pi/remoto/temperatura.js');
+const eventos = require('/home/pi/remoto/eventos.js');
+const hardware = require('/home/pi/remoto/hardware.js');
+const conexao = require('/home/pi/remoto/conexao.js');
 const id = hardware.id();
 	
 log.titulo(id, config);
