@@ -1,6 +1,6 @@
 
 let fs = require('fs');
-const configFile = './config.json';
+const configFile = '/home/pi/remoto/config.json';
 
 let json = fs.readFileSync(configFile);
 let configAtual = JSON.parse(json);
