@@ -14,7 +14,7 @@
         "_storage": "DefaultEndpointsProtocol=https;AccountName=icse;AccountKey=zXkXH59V/wfOT5HpdFHpKW22GbzFTMofRqpWkQnpNsKLi2ATbKCzqiQFuZx4MDHHQ+EWhUXmMDNfXqQIFGia+g==;"
     },
     "temp": {
-        "enabled": true,
+        "enabled": false,
         "type": 22,
         "pin": 25
     },

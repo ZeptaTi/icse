@@ -35,15 +35,23 @@ cadaIntervalo();
 
 async function cadaIntervalo() {
 
-	if (comando.reiniciaSeNecessario())
-		return;
+	try {
+		if (comando.reiniciaSeNecessario())
+			return;
 
-	await comando.executa(id);
+		await comando.executa(id);
 
-	if (config.temp.enabled)
-	 	temp.send();
+		if (config.temp.enabled)
+			temp.send();
 
-	eventos.send(espera);
+		eventos.send(espera);
+
+	}
+	catch(err)
+	{
+		log.erro(err);
+		espera();
+	}
 
 };
 
