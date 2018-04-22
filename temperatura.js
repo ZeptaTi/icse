@@ -32,7 +32,7 @@ function send() {
 
 			sendTemp(json);
 		} else {
-			mensagem(err);
+			log.mensagem(err);
 		}
 	});
 }
