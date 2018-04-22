@@ -6,7 +6,7 @@
 # ---------------------------------------------------------------
 #
 # Para chamar este script utlize a linha de comando abaixo:
-# curl -sL  https://raw.githubusercontent.com/ZeptaTi/icse/master/setup.remoto.sh | sudo -E bash -
+# curl -sL  https://raw.githubusercontent.com/ZeptaTi/icse/master/setup.remoto.sh | bash -
 #
 
 function title {
